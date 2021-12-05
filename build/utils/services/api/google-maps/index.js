@@ -74,7 +74,7 @@ function googleMapsApi(req, res) {
             switch (_b.label) {
                 case 0:
                     _a = req.params, lat = _a.lat, lng = _a.lng;
-                    url = "https://maps.googleapis.com/maps/api/place/nearbysearch/json?keyword=hotel&type=hotel|inn|pension&location=" + lat + "," + lng + "&radius=1500&key=" + process.env.GOOGLE_MAPS_API_KEY;
+                    url = "https://maps.googleapis.com/maps/api/place/nearbysearch/json?keyword=hotel&type=gas_station|point_of_interest|establishment&location=" + lat + "," + lng + "&radius=1500&key=" + process.env.GOOGLE_MAPS_API_KEY;
                     return [4 /*yield*/, axios_1.default.get(url, config)
                             .then(function (response) {
                             var elements = [];
