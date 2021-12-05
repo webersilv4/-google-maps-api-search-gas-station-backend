@@ -2,7 +2,7 @@ import express from 'express';
 import cors from 'cors';
 
 import { googleMapsApi } from '../utils/services/api/google-maps';
-import { createComment, listAllComments } from '../app/comments';
+
 
 
 const app = express();

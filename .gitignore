@@ -4,3 +4,4 @@ test.json
 src/app
 src/db
 src/routes/index.dev.ts
+checklist.txt
