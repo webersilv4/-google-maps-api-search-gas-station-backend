@@ -4,12 +4,6 @@ import { Request, Response } from 'express';
 
 dotenv.config();
 
-const config = {
-    headers: {
-        'Access-control-allow-origin': '*'
-    }
-};
-
 interface ElementsGoogleMapsApi {
     name: string;
     place_id: string;
@@ -29,7 +23,7 @@ export async function googleMapsApi(req: Request, res: Response) {
 
     const url = `https://maps.googleapis.com/maps/api/place/nearbysearch/json?keyword=posto+gasolina&type=gas_station|point_of_interest|establishment&location=${lat},${lng}&radius=1500&key=${process.env.GOOGLE_MAPS_API_KEY}`;
 
-    await axios.get(url, config)
+    await axios.get(url)
         .then(response => {
 
             const elements: Array<object> = [];

@@ -62,11 +62,6 @@ exports.googleMapsApi = void 0;
 var dotenv = __importStar(require("dotenv"));
 var axios_1 = __importDefault(require("axios"));
 dotenv.config();
-var config = {
-    headers: {
-        'Access-control-allow-origin': '*'
-    }
-};
 function googleMapsApi(req, res) {
     return __awaiter(this, void 0, void 0, function () {
         var _a, lat, lng, url;
@@ -74,8 +69,8 @@ function googleMapsApi(req, res) {
             switch (_b.label) {
                 case 0:
                     _a = req.params, lat = _a.lat, lng = _a.lng;
-                    url = "https://maps.googleapis.com/maps/api/place/nearbysearch/json?keyword=hotel&type=hotel|inn|pension&location=" + lat + "," + lng + "&radius=1500&key=" + process.env.GOOGLE_MAPS_API_KEY;
-                    return [4 /*yield*/, axios_1.default.get(url, config)
+                    url = "https://maps.googleapis.com/maps/api/place/nearbysearch/json?keyword=posto+gasolina&type=gas_station|point_of_interest|establishment&location=" + lat + "," + lng + "&radius=1500&key=" + process.env.GOOGLE_MAPS_API_KEY;
+                    return [4 /*yield*/, axios_1.default.get(url)
                             .then(function (response) {
                             var elements = [];
                             var results = response.data.results;

@@ -7,13 +7,13 @@ var express_1 = __importDefault(require("express"));
 var cors_1 = __importDefault(require("cors"));
 var google_maps_1 = require("../utils/services/api/google-maps");
 var comments_1 = require("../app/comments");
-var app = express_1.default();
+var app = (0, express_1.default)();
 var corsOptions = {
     origin: process.env.CORS_ORIGIN,
     optionsSuccessStatus: 200
 };
 app.use(express_1.default.json());
-app.use(cors_1.default(corsOptions));
+app.use((0, cors_1.default)(corsOptions));
 app.get('/', comments_1.createComment);
 app.get('/list', comments_1.listAllComments);
 app.get('/api/v1/places/:lat/:lng', google_maps_1.googleMapsApi);
