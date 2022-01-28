@@ -6,11 +6,7 @@
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1",
         "dev": "ts-node-dev --respawn --ignore-watch node_modules src/server.ts",
-<<<<<<< HEAD
         "build-test": "node ./build/server.js",
-=======
-        "build-test": "tsc && node ./build/server.js",
->>>>>>> a1382451596951d8dba4ee045c1fb88331bc6eda
         "start": "tsc && node ./build/server.js"
     },
     "keywords": [],
@@ -31,8 +27,6 @@
         "@typescript-eslint/eslint-plugin": "^5.4.0",
         "@typescript-eslint/parser": "^5.4.0",
         "eslint": "^8.2.0",
-        "nodemon": "^2.0.15",
-        "sucrase": "3.20.1",
         "ts-node-dev": "^1.1.8",
         "typescript": "4.4.3"
     }
